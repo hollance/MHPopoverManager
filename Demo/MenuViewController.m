@@ -3,21 +3,20 @@
 
 @implementation MenuViewController
 
-- (void)dealloc
-{
-	NSLog(@"dealloc MenuViewController");
-	[super dealloc];
-}
-
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	self.contentSizeForViewInPopover = CGSizeMake(320, 320);
+	self.contentSizeForViewInPopover = CGSizeMake(320.0f, 320.0f);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+- (void)dealloc
+{
+	NSLog(@"dealloc %@", self);
 }
 
 @end

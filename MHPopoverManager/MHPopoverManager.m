@@ -1,7 +1,5 @@
-/*!
- * \file MHPopoverManager.m
- *
- * Copyright (c) 2011 Matthijs Hollemans
+/*
+ * Copyright (c) 2011-2012 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,15 +23,13 @@
 #import "MHPopoverManager.h"
 
 @interface MHPopoverManager ()
-@property (nonatomic, retain) NSMutableDictionary *dictionary;
 @property (nonatomic, assign, readwrite) NSInteger tagOfVisiblePopoverBeforeRotation;
 @end
 
 @implementation MHPopoverManager
-
-@synthesize delegate = _delegate;
-@synthesize dictionary = _dictionary;
-@synthesize tagOfVisiblePopoverBeforeRotation = _tagOfVisiblePopoverBeforeRotation;
+{
+	NSMutableDictionary *_dictionary;
+}
 
 - (id)init
 {
@@ -57,8 +53,6 @@
 
 - (void)dealloc
 {
-	NSLog(@"dealloc MHPopoverManager");
-
 	[[NSNotificationCenter defaultCenter] removeObserver:self
 		name:UIApplicationDidReceiveMemoryWarningNotification
 		object:nil];
@@ -67,30 +61,25 @@
 		name:UIApplicationWillChangeStatusBarOrientationNotification
 		object:nil];
 
-	// First make sure all popovers are dismissed before we release them.
-	for (NSNumber *key in self.dictionary)
+	[_dictionary enumerateKeysAndObjectsUsingBlock:^(id key, UIPopoverController *popoverController, BOOL *stop)
 	{
-		UIPopoverController *popoverController = [self.dictionary objectForKey:key];
 		if (popoverController.isPopoverVisible)
 		{
 			[popoverController dismissPopoverAnimated:NO];
 		}
-	}
-
-	[_dictionary release];
-	[super dealloc];
+	}];
 }
 
 - (UIPopoverController *)popoverControllerWithTag:(NSInteger)tag
 {
-	NSNumber *number = [NSNumber numberWithInteger:tag];
-	UIPopoverController *popoverController = [self.dictionary objectForKey:number];
+	NSNumber *key = @(tag);
+	UIPopoverController *popoverController = _dictionary[key];
 	if (popoverController == nil && self.delegate != nil)
 	{
 		popoverController = [self.delegate popoverManager:self instantiatePopoverControllerWithTag:tag];
 		if (popoverController != nil)
 		{
-			[self.dictionary setObject:popoverController forKey:number];
+			_dictionary[key] = popoverController;
 		}
 	}
 	return popoverController;
@@ -98,8 +87,8 @@
 
 - (void)dismissPopoverControllerWithTag:(NSInteger)tag animated:(BOOL)animated
 {
-	NSNumber *number = [NSNumber numberWithInteger:tag];
-	UIPopoverController *popoverController = [self.dictionary objectForKey:number];
+	NSNumber *key = @(tag);
+	UIPopoverController *popoverController = _dictionary[key];
 	if (popoverController != nil && popoverController.popoverVisible)
 	{
 		[popoverController dismissPopoverAnimated:animated];
@@ -109,13 +98,13 @@
 - (void)didReceiveMemoryWarningNotification:(NSNotification *)notification
 {
 	// Release all the popovers that are not currently visible.
-	NSArray *keys = [self.dictionary allKeys];
+	NSArray *keys = [_dictionary allKeys];
 	for (NSNumber *key in keys)
 	{
-		UIPopoverController *popoverController = [self.dictionary objectForKey:key];
+		UIPopoverController *popoverController = _dictionary[key];
 		if (!popoverController.popoverVisible)
 		{
-			[self.dictionary removeObjectForKey:key];
+			[_dictionary removeObjectForKey:key];
 		}
 	}
 }
@@ -126,9 +115,9 @@
 
 	self.tagOfVisiblePopoverBeforeRotation = NSNotFound;
 
-	for (NSNumber *key in self.dictionary)
+	for (NSNumber *key in _dictionary)
 	{
-		UIPopoverController *popoverController = [self.dictionary objectForKey:key];
+		UIPopoverController *popoverController = _dictionary[key];
 		if (popoverController.isPopoverVisible)
 		{
 			self.tagOfVisiblePopoverBeforeRotation = [key integerValue];

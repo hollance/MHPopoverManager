@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B109B3B1684EA8C008D78E0 /* MHPopoverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B109B3A1684EA8C008D78E0 /* MHPopoverManager.m */; };
 		7B73EA4B145C524F00CF489E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B73EA4A145C524F00CF489E /* UIKit.framework */; };
 		7B73EA4D145C524F00CF489E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B73EA4C145C524F00CF489E /* Foundation.framework */; };
 		7B73EA4F145C524F00CF489E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B73EA4E145C524F00CF489E /* CoreGraphics.framework */; };
 		7B73EA55145C524F00CF489E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B73EA53145C524F00CF489E /* InfoPlist.strings */; };
 		7B73EA57145C524F00CF489E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B73EA56145C524F00CF489E /* main.m */; };
 		7B73EA5B145C524F00CF489E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B73EA5A145C524F00CF489E /* AppDelegate.m */; };
-		7B73EA5E145C524F00CF489E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B73EA5D145C524F00CF489E /* ViewController.m */; };
-		7B73EA61145C524F00CF489E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B73EA5F145C524F00CF489E /* ViewController.xib */; };
-		7B73EA69145C52E800CF489E /* MHPopoverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B73EA68145C52E800CF489E /* MHPopoverManager.m */; };
+		7B73EA5E145C524F00CF489E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B73EA5D145C524F00CF489E /* MainViewController.m */; };
+		7B73EA61145C524F00CF489E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B73EA5F145C524F00CF489E /* MainViewController.xib */; };
 		7B73EA6D145C549600CF489E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B73EA6B145C549600CF489E /* MenuViewController.m */; };
 		7B73EA6E145C549600CF489E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B73EA6C145C549600CF489E /* MenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B109B391684EA8C008D78E0 /* MHPopoverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHPopoverManager.h; sourceTree = "<group>"; };
+		7B109B3A1684EA8C008D78E0 /* MHPopoverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHPopoverManager.m; sourceTree = "<group>"; };
 		7B73EA46145C524F00CF489E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B73EA4A145C524F00CF489E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7B73EA4C145C524F00CF489E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,11 +33,9 @@
 		7B73EA58145C524F00CF489E /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 		7B73EA59145C524F00CF489E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B73EA5A145C524F00CF489E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7B73EA5C145C524F00CF489E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7B73EA5D145C524F00CF489E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7B73EA60145C524F00CF489E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		7B73EA67145C52E800CF489E /* MHPopoverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHPopoverManager.h; sourceTree = "<group>"; };
-		7B73EA68145C52E800CF489E /* MHPopoverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHPopoverManager.m; sourceTree = "<group>"; };
+		7B73EA5C145C524F00CF489E /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7B73EA5D145C524F00CF489E /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7B73EA60145C524F00CF489E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		7B73EA6A145C549600CF489E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		7B73EA6B145C549600CF489E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		7B73EA6C145C549600CF489E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -55,9 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B109B381684EA8C008D78E0 /* MHPopoverManager */ = {
+			isa = PBXGroup;
+			children = (
+				7B109B391684EA8C008D78E0 /* MHPopoverManager.h */,
+				7B109B3A1684EA8C008D78E0 /* MHPopoverManager.m */,
+			);
+			path = MHPopoverManager;
+			sourceTree = "<group>";
+		};
 		7B73EA3B145C524F00CF489E = {
 			isa = PBXGroup;
 			children = (
+				7B109B381684EA8C008D78E0 /* MHPopoverManager */,
 				7B73EA50145C524F00CF489E /* Demo */,
 				7B73EA49145C524F00CF489E /* Frameworks */,
 				7B73EA47145C524F00CF489E /* Products */,
@@ -87,15 +97,13 @@
 			children = (
 				7B73EA59145C524F00CF489E /* AppDelegate.h */,
 				7B73EA5A145C524F00CF489E /* AppDelegate.m */,
+				7B73EA5C145C524F00CF489E /* MainViewController.h */,
+				7B73EA5D145C524F00CF489E /* MainViewController.m */,
+				7B73EA5F145C524F00CF489E /* MainViewController.xib */,
 				7B73EA6A145C549600CF489E /* MenuViewController.h */,
 				7B73EA6B145C549600CF489E /* MenuViewController.m */,
 				7B73EA6C145C549600CF489E /* MenuViewController.xib */,
-				7B73EA67145C52E800CF489E /* MHPopoverManager.h */,
-				7B73EA68145C52E800CF489E /* MHPopoverManager.m */,
 				7B73EA51145C524F00CF489E /* Supporting Files */,
-				7B73EA5C145C524F00CF489E /* ViewController.h */,
-				7B73EA5D145C524F00CF489E /* ViewController.m */,
-				7B73EA5F145C524F00CF489E /* ViewController.xib */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -104,9 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				7B73EA52145C524F00CF489E /* Demo-Info.plist */,
+				7B73EA58145C524F00CF489E /* Demo-Prefix.pch */,
 				7B73EA53145C524F00CF489E /* InfoPlist.strings */,
 				7B73EA56145C524F00CF489E /* main.m */,
-				7B73EA58145C524F00CF489E /* Demo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,7 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B73EA55145C524F00CF489E /* InfoPlist.strings in Resources */,
-				7B73EA61145C524F00CF489E /* ViewController.xib in Resources */,
+				7B73EA61145C524F00CF489E /* MainViewController.xib in Resources */,
 				7B73EA6E145C549600CF489E /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,9 +185,9 @@
 			files = (
 				7B73EA57145C524F00CF489E /* main.m in Sources */,
 				7B73EA5B145C524F00CF489E /* AppDelegate.m in Sources */,
-				7B73EA5E145C524F00CF489E /* ViewController.m in Sources */,
-				7B73EA69145C52E800CF489E /* MHPopoverManager.m in Sources */,
+				7B73EA5E145C524F00CF489E /* MainViewController.m in Sources */,
 				7B73EA6D145C549600CF489E /* MenuViewController.m in Sources */,
+				7B109B3B1684EA8C008D78E0 /* MHPopoverManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,12 +202,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		7B73EA5F145C524F00CF489E /* ViewController.xib */ = {
+		7B73EA5F145C524F00CF489E /* MainViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B73EA60145C524F00CF489E /* en */,
 			);
-			name = ViewController.xib;
+			name = MainViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -253,13 +261,17 @@
 		7B73EA65145C524F00CF489E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -267,13 +279,17 @@
 		7B73EA66145C524F00CF489E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -297,6 +313,7 @@
 				7B73EA66145C524F00CF489E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

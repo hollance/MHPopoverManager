@@ -1,7 +1,5 @@
-/*!
- * \file MHPopoverManager.h
- *
- * Copyright (c) 2011 Matthijs Hollemans
+/*
+ * Copyright (c) 2011-2012 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +22,7 @@
 
 @protocol MHPopoverManagerDelegate;
 
-/*!
+/*
  * Manages the lifecycle of one or more UIPopoverControllers and their content
  * view controllers.
  *
@@ -41,28 +39,28 @@
  */
 @interface MHPopoverManager : NSObject
 
-/*! The delegate, usually a view controller. */
-@property (nonatomic, assign) id <MHPopoverManagerDelegate> delegate;
+/* The delegate, usually a view controller. */
+@property (nonatomic, weak) id <MHPopoverManagerDelegate> delegate;
 
-/*!
+/*
  * For popovers that are presented from controls other than bar button items,
  * you will have to restore them manually after the user interface orientation
  * changes; this property contains the tag of the popover that was visible at
  * the time the rotation took place, or NSNotFound if no popover was visible.
  *
- * \note The HIG allows only one popover at a time to be visible. Your app will
+ * Note: The HIG allows only one popover at a time to be visible. Your app will
  * be rejected from the App Store if you display more than one popover.
  */
 @property (nonatomic, assign, readonly) NSInteger tagOfVisiblePopoverBeforeRotation;
 
-/*!
+/*
  * Returns the UIPopoverController for the specified tag, or creates a new one
  * if no instance exists yet. To create the new instance, the delegate method
  * popoverManager:instantiatePopoverControllerWithTag: is invoked.
  */
 - (UIPopoverController *)popoverControllerWithTag:(NSInteger)tag;
 
-/*!
+/*
  * Dismisses the specified popover if it is visible. You can safely call this
  * method even if no popover instance for the specified tag exists yet.
  */
@@ -70,12 +68,12 @@
 
 @end
 
-/*!
+/*
  * The delegate protocol for MHPopoverManager.
  */
 @protocol MHPopoverManagerDelegate <NSObject>
 
-/*!
+/*
  * Invoked when a new popover controller and its contents view controller must
  * be created. You are responsible for creating and configuring both the content
  * view controller and the popover controller.
@@ -84,7 +82,7 @@
 
 @optional
 
-/*!
+/*
  * Invoked when the interface orientation changes. If you do not implement this
  * method, any visible popovers will be automatically hidden upon rotation (i.e.
  * the default is YES).

@@ -10,4 +10,4 @@ Advantages of using MHPopoverManager:
 
 A basic demo project is included.
 
-The MHPopoverManager source code is copyright 2011 Matthijs Hollemans and is licensed under the terms of the MIT license.
+The MHPopoverManager source code is copyright 2011-2012 Matthijs Hollemans and is licensed under the terms of the MIT license.
